@@ -302,4 +302,17 @@ $('#slider-parallax').stellar();
   });
  
 });
+
+const muteBtn = document.getElementById('mute-btn');
+const video = document.getElementById('background-video');
+
+muteBtn.addEventListener('click', () => {
+    if (video.muted) {
+        video.muted = false;
+        muteBtn.textContent = 'Mute';
+    } else {
+        video.muted = true;
+        muteBtn.textContent = 'Unmute';
+    }
+});
 	
